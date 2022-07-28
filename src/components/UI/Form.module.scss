@@ -1,0 +1,72 @@
+@import '../../global.scss';
+
+.form {
+  margin-top: 2rem;
+  @include resol(mobile) {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & input {
+    width: 50%;
+    height: 5rem;
+    border: none;
+    border-bottom: 0.1rem solid black;
+    margin: 2rem 0;
+    font-size: 1.7rem;
+    padding-left: 1rem;
+    @include resol(mobile) {
+      width: 35%;
+      height: 4rem;
+      margin: 1rem;
+      margin-left: 0;
+    }
+    &::placeholder {
+      @include resol(mobile) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  & textarea {
+    width: 90%;
+    font-size: 1.7rem;
+    margin: 2rem 0;
+    padding-left: 1rem;
+    @include resol(mobile) {
+      height: 5rem;
+    }
+    &::placeholder {
+      @include resol(mobile) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  & button {
+    font-size: 1.7rem;
+    border-radius: 5%;
+    border: none;
+    padding: 1.5rem;
+    background-color: #59b256;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    @include resol(mobile) {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+  }
+}
+.form-dark {
+  & input {
+    background-color: #333;
+    &::placeholder {
+      color: white;
+    }
+  }
+  & textarea {
+    background-color: #333;
+    &::placeholder {
+      color: white;
+    }
+  }
+}

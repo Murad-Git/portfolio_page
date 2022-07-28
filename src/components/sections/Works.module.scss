@@ -1,0 +1,36 @@
+@import '../../global.scss';
+
+.works {
+  background-color: crimson;
+  position: relative;
+  @include flex;
+  & .arrow {
+    color: rgb(245, 179, 155);
+    font-size: 8rem;
+    position: absolute;
+    cursor: pointer;
+    &.left {
+      left: 13rem;
+    }
+    &.right {
+      right: 13rem;
+      transform: rotateY(180deg);
+    }
+    @include resol(mobile) {
+      display: none;
+    }
+  }
+  & .slider {
+    height: 50rem;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+    @include resol(mobile) {
+      transform: inherit;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

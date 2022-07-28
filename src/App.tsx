@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import classes from './App.module.scss';
+import Intro from './components/sections/Intro';
+import About from './components/sections/About';
+import ProductList from './components/sections/ProductList';
+import Contact from './components/sections/Contact';
+import Toggle from './components/toggle/Toggle';
+import { useContext } from 'react';
+import { ThemesContext } from './store/themes.context';
+import Navbar from './components/navbar/Navbar';
+import Works from './components/sections/Works';
 
 function App() {
+  const themeCtx = useContext(ThemesContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.app}>
+      <Navbar />
+      {/* <Toggle /> */}
+      <div className={classes.sections}>
+        <Intro />
+        <About />
+        <ProductList />
+        <Works />
+        <Contact />
+      </div>
     </div>
   );
 }
 
 export default App;
+
+//  style={{
+//     backgroundColor: darkMode ? '#222' : 'white',
+//     color: darkMode ? 'white' : 'black',
+//   }}
