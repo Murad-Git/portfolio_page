@@ -7,11 +7,12 @@ import { ThemesContext } from '../../store/themes.context';
 const Works = () => {
   const themeCtx = useContext(ThemesContext);
   const { changeSlide } = themeCtx;
+  const { currentSlide } = themeCtx;
   return (
     <section className={classes.works} id='works'>
       <div
         className={classes.slider}
-        style={{ transform: `translateX(-${themeCtx.currentSlide * 100}vw)` }}
+        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         <WorksContainer />
       </div>

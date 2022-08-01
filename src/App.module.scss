@@ -1,8 +1,9 @@
-@import './global.scss';
+@import 'global.scss';
 
 .app {
   height: 100vh;
-
+  background-color: $mainColor;
+  color: $textColor;
   .sections {
     width: 100%;
     height: calc(100vh - 7rem);
@@ -23,4 +24,8 @@
       scroll-snap-align: start;
     }
   }
+}
+.dark {
+  background-color: $mainColorDark;
+  color: $textColorDark;
 }

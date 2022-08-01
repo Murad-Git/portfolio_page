@@ -1,9 +1,13 @@
+@import '../../global.scss';
+
+// @import '../styles/media-queries.scss';
+
 .t {
   width: 5rem;
   height: 2.5rem;
   border-radius: 2rem;
   border: 0.1rem solid #999;
-  background-color: white;
+  background-color: $mainColor;
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -11,24 +15,54 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-
   &-icon {
     width: 1.5rem;
     height: 1.5rem;
-    color: #59b256;
+    color: $thirdColor;
   }
   &-button {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
     border: none;
-    background-color: #999;
+    background-color: $textColor;
     position: absolute;
     cursor: pointer;
     left: 0;
+    transform: translate(1, 0);
+    &::after {
+      transition: 0.3s;
+    }
+  }
+  @include resol(mobile) {
+    top: 12rem;
+    left: 33rem;
+    border: 0.3rem solid $textColorDark;
+  }
+  @include resol(mobileSmall) {
+    top: 8rem;
+    left: 30rem;
   }
 }
 .dark {
-  right: 0;
+  right: calc(100% - 5rem);
   left: inherit;
+  @include resol(mobile) {
+    left: auto;
+  }
+  // }
 }
+
+// @mixin t--sm() {
+//   .t {
+//     top: 11rem;
+//     left: 31rem;
+//   }
+// }
+// @mixin t--mb() {
+//   .t {
+//     top: 12rem;
+//     left: 33rem;
+//     border: 0.3rem solid $textColorDark;
+//   }
+// }

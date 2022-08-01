@@ -1,18 +1,17 @@
 import Product from './Product';
 import classes from './ProductList.module.scss';
 import { products } from '../../data/projects';
+import { useInViewHook } from '../hooks/use-inViewEffect';
 
 const ProductList = () => {
+  const { ref, isVisible } = useInViewHook();
+
   return (
     <section className={classes.pl} id='projects'>
-      <div className={classes['pl-texts']}>
-        <h1 className={classes['pl-title']}>Create & inspire. </h1>
-        <p className={classes['pl-desc']}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-          officiis, asperiores explicabo velit ipsum quas!
-        </p>
+      <div ref={ref} className={classes['pl-texts']}>
+        {isVisible && <h1 className={classes['pl-title']}>My Projects</h1>}
       </div>
-      <ul className={classes['pl-list']}>
+      <ul ref={ref} className={classes['pl-list']}>
         {products.map((product) => (
           <Product img={product.img} link={product.link} key={product.id} />
         ))}

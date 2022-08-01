@@ -1,12 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
-$mainColor: #15023a;
+$mainColor: #f6f5f5;
+$mainColorDark: #121212;
+$secondColor: #d3e0ea;
+$thirdColor: #1687a7;
+$textColor: #276678;
+$textColorDark: #3e95ad;
 
+// :root {
+//   $mainColor: #f6f5f5;
+//   $secondColor: #d3e0ea;
+//   $thirdColor: #1687a7;
+//   $textColor: #276678;
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     $mainColor: #121212;
+//   }
+// }
+
+$widthSmall: 37.5rem;
 $widthMobile: 48rem;
 $widthTablet: 76.8rem;
-$widthDesktop: 120rem;
+$widthBig: 180rem;
 
 @mixin resol($breakpoint) {
+  @if $breakpoint == mobileSmall {
+    @media screen and (max-width: #{$widthSmall}) {
+      @content;
+    }
+  } //375px
   @if $breakpoint == mobile {
     @media screen and (max-width: #{$widthMobile}) {
       @content;
@@ -33,7 +57,9 @@ $widthDesktop: 120rem;
 html {
   font-size: 10px;
 }
+
 body {
+  background-color: $mainColor;
   margin: 0;
   padding: 0;
   border: 0;
@@ -41,6 +67,13 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.4rem;
   overflow-x: hidden;
+}
+body [data-theme='dark'] {
+  $mainColor: #121212;
+  $secondColor: #d3e0ea;
+  $thirdColor: #1687a7;
+  $textColor: #276678;
+  background-color: $mainColor;
 }
 h1 {
   font-size: 5rem;
@@ -52,6 +85,7 @@ a {
   text-decoration: none;
 }
 button {
+  cursor: pointer;
   background-color: inherit;
   color: inherit;
   border: none;
@@ -62,77 +96,84 @@ button {
     opacity: 0;
   }
   25% {
-    opacity: 0;
+    opacity: 0.2;
   }
   50% {
     opacity: 0.5;
   }
+  75% {
+    opacity: 0.8;
+  }
   100% {
     opacity: 1;
   }
 }
-
-@keyframes fromBottomAnim {
-  0% {
-    opacity: 0;
-    top: 300rem;
-  }
-  25% {
-    opacity: 0;
-    top: 75rem;
-  }
-  50% {
-    opacity: 0;
-    top: 30rem;
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-  }
-}
-
 @keyframes fromLeftAnim {
   0% {
     opacity: 0;
-    right: 300rem;
+    transform: translateX(-40rem);
   }
+  25% {
+    opacity: 0.2;
+    transform: translateX(-30rem);
+  }
+
   50% {
-    opacity: 0;
-    right: 50rem;
+    opacity: 0.5;
+    transform: translateX(-20rem);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translateX(-10rem);
   }
   100% {
     opacity: 1;
-    right: 0;
-    left: 5rem;
+    transform: translateX(0);
   }
 }
 @keyframes fromRightAnim {
   0% {
     opacity: 0;
-    left: 100rem;
+    transform: translateX(40rem);
   }
-  50% {
+  25% {
     opacity: 0;
-    left: 50rem;
+    transform: translateX(30rem);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(20rem);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translateX(10rem);
   }
   100% {
     opacity: 1;
-    left: 10rem;
-    right: 20rem;
+    transform: translateX(0);
   }
 }
 @keyframes fromBottomAnim {
   0% {
     opacity: 0;
-    top: 100rem;
+    transform: translateY(100rem);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(50rem);
   }
   50% {
-    opacity: 0;
-    top: 20rem;
+    opacity: 0.5;
+    transform: translateY(25rem);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translateY(10rem);
   }
   100% {
     opacity: 1;
-    top: 5rem;
+    transform: translateY(0);
   }
 }
 // @mixin resol ($breakpoint) {

@@ -1,0 +1,73 @@
+@import '../../global.scss';
+
+.footer {
+  background-color: $secondColor;
+  box-shadow: inset 0 0.1rem 0 0 #eceef2;
+  color: $textColor;
+  overflow: hidden;
+  display: flex;
+  height: 15rem;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  @include resol(mobile) {
+    height: 7rem;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    .field {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      @include resol(mobile) {
+        width: 70%;
+      }
+      .contact {
+        margin-bottom: 1rem;
+        font-style: normal;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        @include resol(mobile) {
+          margin: 0.5rem 0;
+        }
+        @include resol(mobileSmall) {
+          margin: 0;
+        }
+      }
+      .socials {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        a {
+          font-size: 2rem;
+          color: #6a6d75;
+          &:hover {
+            color: $textColor;
+          }
+          .icon {
+            font-size: 2rem;
+            @include resol(mobileSmall) {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    height: auto;
+    line-height: 3.2rem;
+    color: #fff;
+    background-color: #0f346c;
+    p {
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

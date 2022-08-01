@@ -1,0 +1,24 @@
+@import '../toggle//Toggle.module.scss';
+
+$widthSmall: 37.5rem;
+$widthMobile: 48rem;
+$widthTablet: 76.8rem;
+$widthBig: 180rem;
+
+// small screen size (sm) 375 px
+@media screen and (max-width: #{$widthSmall}) {
+  @include t--sm();
+}
+
+// mobile screen size (mb) 480 px
+@media screen and (max-width: #{$widthMobile}) {
+  @include t--mb();
+}
+
+// tablet screen size (tab) 768 px
+@media screen and (max-width: #{$widthTablet}) {
+}
+
+// big screen screen size (bg) 375 px
+@media screen and (max-width: #{$bigScreen}) {
+}

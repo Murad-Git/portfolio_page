@@ -1,7 +1,7 @@
 import classes from './Contact.module.scss';
 import Icons from '../UI/Icons';
 import Form from '../UI/Form';
-import Footer from '../footer/Footer';
+import Footer from './/Footer';
 
 const Contact = () => {
   return (

@@ -1,11 +1,10 @@
 @import '../../global.scss';
 
 .works {
-  background-color: crimson;
   position: relative;
   @include flex;
   & .arrow {
-    color: rgb(245, 179, 155);
+    color: $textColor;
     font-size: 8rem;
     position: absolute;
     cursor: pointer;

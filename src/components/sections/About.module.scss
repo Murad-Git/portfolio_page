@@ -3,7 +3,7 @@
 .a {
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   @include resol(mobile) {
     flex-direction: column;
     text-align: center;
@@ -16,16 +16,37 @@
     justify-content: center;
     position: relative;
     height: 100%;
-    @include resol(mobile) {
-      width: 100%;
-    }
     .imgAnim {
-      animation: fromRightAnim 2s ease-in;
+      animation: fromRightAnim 1.5s linear;
     }
   }
   &-right {
+    &-title {
+      margin: 0;
+      margin-top: 2rem;
+      font-size: 6rem;
+      @include resol(mobileSmall) {
+        font-size: 5rem;
+      }
+    }
+    &-sub {
+      font-size: 2.5rem;
+      @include resol(mobileSmall) {
+        font-size: 2rem;
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+    }
+    &-desc {
+      font-size: 2rem;
+      @include resol(mobileSmall) {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
     flex: 1;
     padding: 2rem;
+    animation: appearAnim 2.5s linear;
     @include resol(mobile) {
       padding: 2rem;
     }
@@ -44,8 +65,8 @@
       position: absolute;
       top: 5rem;
       left: 5rem;
-      background-color: #333;
-      animation: fromBottomAnim 2s ease-in;
+      background-color: $secondColor;
+      animation: fromBottomAnim 1.5s linear;
       @include resol(mobile) {
         display: none;
       }
@@ -56,13 +77,62 @@
     height: 100%;
     object-fit: cover;
   }
-  &-award {
+  &-tech {
     margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap;
     @include resol(mobile) {
-      display: none;
+      margin: 0;
+    }
+    .tool {
+      @include flex;
+      margin: 2rem;
+      margin-bottom: 3rem;
+      font-size: 10rem;
+      animation: none;
+      :hover {
+        animation: jump 1s ease-in-out infinite;
+      }
+      @include resol(mobile) {
+        margin: 1rem;
+        font-size: 7rem;
+      }
+      @include resol(mobileSmall) {
+        font-size: 6rem;
+      }
+      .react {
+        color: #61dafb;
+      }
+      .redux {
+        color: #764abc;
+      }
+      .ts {
+        color: #3178c6;
+      }
+      .node {
+        color: #6cc24a;
+      }
+      .mongodb {
+        color: #116149;
+      }
+      .sass {
+        color: #cd6799;
+      }
+      .bootstrap {
+        color: #712cf9;
+      }
+      .figma {
+        height: 10rem;
+        @include resol(mobile) {
+          height: 7rem;
+        }
+        @include resol(mobileSmall) {
+          height: 6rem;
+        }
+      }
     }
     &-img {
       width: 12rem;
@@ -86,5 +156,17 @@
       font-weight: 300;
       font-size: 1.5rem;
     }
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

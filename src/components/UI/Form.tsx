@@ -7,13 +7,13 @@ const Inputs = () => {
   const themeCtx = useContext(ThemesContext);
   const { darkMode } = themeCtx;
   const formRef = useRef<HTMLFormElement>(null);
-  const [formSent, setFormSent] = useState(false);
+  const [formStatus, setFormStatus] = useState('Submit');
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
     const enteredText = formRef.current;
     console.log(`formRef: ${formRef}, enteredText ${enteredText}`);
-
+    setFormStatus('Sending...');
     emailjs
       .sendForm(
         'service_499lwmq',
@@ -24,12 +24,16 @@ const Inputs = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setFormSent(true);
+          setFormStatus('Done!');
         },
         (error) => {
           console.log(error.text);
+          setFormStatus('Something went wrong :(');
         }
       );
+  };
+  const clearHandler = () => {
+    formRef.current?.reset();
   };
 
   return (
@@ -61,8 +65,7 @@ const Inputs = () => {
         rows={6}
         placeholder='Message'
       />
-      <button>Submit</button>
-      {formSent && <p>Thank you for your email</p>}
+      <button onClick={clearHandler}>{formStatus}</button>
     </form>
   );
 };

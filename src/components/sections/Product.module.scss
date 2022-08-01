@@ -4,7 +4,7 @@
   width: 30%;
   height: 35vh;
   margin: 1rem;
-  border: 0.2rem solid rgb(243, 242, 242);
+  border: 0.2rem solid $secondColor;
   border-radius: 1rem 1rem 0 0;
   overflow: hidden;
   @include resol(mobile) {
@@ -13,7 +13,7 @@
   }
   &-browser {
     height: 2rem;
-    background-color: rgb(243, 242, 242);
+    background-color: $secondColor;
     display: flex;
     align-items: center;
     position: sticky;
@@ -28,9 +28,9 @@
   }
   &-img {
     width: 100%;
-    transition: all 10s ease;
+    transition: all 5s ease;
   }
   &:hover &-img {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
   }
 }

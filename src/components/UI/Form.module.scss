@@ -11,7 +11,7 @@
     width: 50%;
     height: 5rem;
     border: none;
-    border-bottom: 0.1rem solid black;
+    border-bottom: 0.1rem solid $textColor;
     margin: 2rem 0;
     font-size: 1.7rem;
     padding-left: 1rem;
@@ -21,13 +21,18 @@
       margin: 1rem;
       margin-left: 0;
     }
+    @include resol(mobileSmall) {
+      height: 3.5rem;
+    }
     &::placeholder {
+      color: $textColor;
       @include resol(mobile) {
         font-size: 1.2rem;
       }
     }
   }
   & textarea {
+    border: 0.1rem solid $textColor;
     width: 90%;
     font-size: 1.7rem;
     margin: 2rem 0;
@@ -35,7 +40,11 @@
     @include resol(mobile) {
       height: 5rem;
     }
+    @include resol(mobileSmall) {
+      height: 4.5em;
+    }
     &::placeholder {
+      color: $textColor;
       @include resol(mobile) {
         font-size: 1.2rem;
       }
@@ -46,13 +55,16 @@
     border-radius: 5%;
     border: none;
     padding: 1.5rem;
-    background-color: #59b256;
-    color: white;
+    background-color: $secondColor;
     font-weight: 500;
     cursor: pointer;
     @include resol(mobile) {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-top: 1rem;
+      padding: 1rem;
+    }
+    @include resol(mobileSmall) {
+      margin: 0;
     }
   }
 }

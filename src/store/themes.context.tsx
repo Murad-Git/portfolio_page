@@ -3,7 +3,11 @@ import React, { createContext, useState } from 'react';
 interface Props {
   children?: React.ReactNode;
 }
-
+const themeValue = () => {
+  const theme = localStorage.getItem('data-theme');
+  const themeBool = theme === 'light' ? false : true;
+  return themeBool;
+};
 // variables typing
 type ThemesContextState = {
   darkMode: boolean;
@@ -16,7 +20,7 @@ type ThemesContextState = {
 
 // default state
 const contextDefaultValues: ThemesContextState = {
-  darkMode: false,
+  darkMode: themeValue(),
   toggleMode: () => {},
   currentSlide: 0,
   changeSlide: () => {},
@@ -42,7 +46,14 @@ const ThemesProvider: React.FC<Props> = ({ children }) => {
 
   // dark theme
   const togglePageMode = () => {
-    setPageMode(!pageMode);
+    if (!pageMode) {
+      setPageMode((pageMode) => !pageMode);
+      localStorage.setItem('data-theme', 'dark');
+    }
+    if (pageMode) {
+      setPageMode((pageMode) => !pageMode);
+      localStorage.setItem('data-theme', 'light');
+    }
   };
   // slider
   const changeSlide = (isLeft: string | null) => {
@@ -54,7 +65,7 @@ const ThemesProvider: React.FC<Props> = ({ children }) => {
   };
   // hamburger menu
   const openMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((isMenuOpen) => !isMenuOpen);
   };
   // change default values with the current
   const contextValue: ThemesContextState = {

@@ -13,9 +13,13 @@
   &-title {
     margin: 1rem 0;
     font-weight: 600;
+    animation: fromLeftAnim 2s ease-in;
     @include resol(mobile) {
       margin: 2rem 0;
       font-size: 4rem;
+    }
+    @include resol(mobileSmall) {
+      font-size: 5rem;
     }
   }
   &-list {
@@ -31,6 +35,9 @@
     }
   }
   &-desc {
+    animation: fromRightAnim 2s ease-in;
+    font-size: 2.5rem;
+    margin: 0;
     @include resol(mobile) {
       display: none;
     }
