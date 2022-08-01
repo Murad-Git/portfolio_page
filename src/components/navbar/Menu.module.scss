@@ -5,7 +5,7 @@
   height: 5rem;
   @include flex;
   transition: all 1s ease;
-  @include resol(mobile) {
+  @include resol(tablet) {
     display: none;
   }
   .listBig {
@@ -15,12 +15,12 @@
     font-weight: 300;
     width: 40%;
     margin: 0;
-    @include resol(mobile) {
+    @include resol(tablet) {
       display: none;
     }
     & li {
       margin-right: 1.5rem;
-      @include resol(mobile) {
+      @include resol(mobileSmall) {
         margin: 1rem;
       }
       & a {
@@ -48,7 +48,7 @@
   box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
   cursor: pointer;
   display: none;
-  @include resol(mobile) {
+  @include resol(tablet) {
     display: block;
   }
 
@@ -86,10 +86,13 @@
 }
 .navSmall {
   display: none;
-  @include resol(mobile) {
+  @include resol(tablet) {
     display: block;
   }
   .listSmall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 200;
     position: absolute;
     top: 33rem;

@@ -6,7 +6,7 @@ import Toggle from '../toggle/Toggle';
 const Intro = () => {
   return (
     <section className={classes.i} id='intro'>
-      <Toggle />
+      {/* <Toggle /> */}
       <div className={classes['i-left']}>
         <div className={classes['i-left-wrapper']}>
           <h2 className={classes['i-intro']}>Hello, My name is</h2>

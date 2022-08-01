@@ -7,9 +7,18 @@
   border: 0.2rem solid $secondColor;
   border-radius: 1rem 1rem 0 0;
   overflow: hidden;
-  @include resol(mobile) {
+  @include resol(tablet) {
+    width: 40%;
+    height: 24vh;
+  }
+  @include resol(mobileSmall) {
     width: 40%;
     height: 20vh;
+  }
+  @include resol(mobile) {
+    width: 40%;
+    height: 22vh;
+    justify-content: inherit;
   }
   &-browser {
     height: 2rem;

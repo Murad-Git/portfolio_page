@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { ThemesContext } from '../../store/themes.context';
+import Toggle from '../toggle/Toggle';
 import Menu from './Menu';
 import classes from './Navbar.module.scss';
 
@@ -10,15 +11,15 @@ const Navbar = () => {
   const { openMenu } = themeCtx;
 
   const handleResize = () => {
-    if (window.innerWidth < 480) setIsMobile(true);
+    if (window.innerWidth < 768) setIsMobile(true);
     else setIsMobile(false);
   };
   useEffect(() => {
     ['load', 'resize'].map((event) =>
       window.addEventListener(event, handleResize)
     );
-    // window.addEventListener('load', handleResize);
   });
+  console.log(`${isMobile}`);
 
   return (
     <section className={`${classes.nav}`}>
@@ -29,6 +30,7 @@ const Navbar = () => {
         <div className={classes.itemContainer}>
           <Menu isMobile={isMobile} openMenu={openMenu} />
         </div>
+        <Toggle />
       </div>
     </section>
   );

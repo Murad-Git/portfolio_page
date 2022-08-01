@@ -3,6 +3,10 @@
 .form {
   margin-top: 2rem;
   @include resol(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include resol(mobile) {
     margin-top: 0;
     display: flex;
     flex-wrap: wrap;
@@ -15,13 +19,15 @@
     margin: 2rem 0;
     font-size: 1.7rem;
     padding-left: 1rem;
+    @include resol(tablet) {
+      width: 100%;
+      margin: 1rem 0;
+    }
     @include resol(mobile) {
       width: 35%;
       height: 4rem;
       margin: 1rem;
       margin-left: 0;
-    }
-    @include resol(mobileSmall) {
       height: 3.5rem;
     }
     &::placeholder {
@@ -37,12 +43,15 @@
     font-size: 1.7rem;
     margin: 2rem 0;
     padding-left: 1rem;
+    @include resol(tablet) {
+      width: 100%;
+    }
     @include resol(mobile) {
       height: 5rem;
     }
-    @include resol(mobileSmall) {
-      height: 4.5em;
-    }
+    // @include resol(mobile) {
+    //   height: 4.5em;
+    // }
     &::placeholder {
       color: $textColor;
       @include resol(mobile) {
@@ -55,15 +64,20 @@
     border-radius: 5%;
     border: none;
     padding: 1.5rem;
-    background-color: $secondColor;
+    color: $mainColor;
+    background-color: $textColor;
     font-weight: 500;
     cursor: pointer;
+    @include resol(tablet) {
+      font-size: 1.3rem;
+      // margin-top: 1rem;
+      // padding: 1rem;
+      // margin: 0;
+    }
     @include resol(mobile) {
       font-size: 1.3rem;
       margin-top: 1rem;
       padding: 1rem;
-    }
-    @include resol(mobileSmall) {
       margin: 0;
     }
   }

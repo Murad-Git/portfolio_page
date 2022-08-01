@@ -34,14 +34,18 @@
       transition: 0.3s;
     }
   }
+  @include resol(tablet) {
+    top: 10rem;
+    right: 1rem;
+  }
   @include resol(mobile) {
-    top: 12rem;
-    left: 33rem;
+    top: 10rem;
+    // left: 40rem;
     border: 0.3rem solid $textColorDark;
   }
   @include resol(mobileSmall) {
     top: 8rem;
-    left: 30rem;
+    // left: 30rem;
   }
 }
 .dark {
@@ -50,19 +54,4 @@
   @include resol(mobile) {
     left: auto;
   }
-  // }
 }
-
-// @mixin t--sm() {
-//   .t {
-//     top: 11rem;
-//     left: 31rem;
-//   }
-// }
-// @mixin t--mb() {
-//   .t {
-//     top: 12rem;
-//     left: 33rem;
-//     border: 0.3rem solid $textColorDark;
-//   }
-// }

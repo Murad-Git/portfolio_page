@@ -20,10 +20,10 @@ $textColorDark: #3e95ad;
 //   }
 // }
 
-$widthSmall: 37.5rem;
-$widthMobile: 48rem;
-$widthTablet: 76.8rem;
-$widthBig: 180rem;
+$widthSmall: 375px;
+$widthMobile: 480px;
+$widthTablet: 768px;
+$widthBig: 1200px;
 
 @mixin resol($breakpoint) {
   @if $breakpoint == mobileSmall {
@@ -42,7 +42,7 @@ $widthBig: 180rem;
     } //768px
   }
   @if $breakpoint == desktop {
-    @media screen and (max-width: #{$widthDesktop}) {
+    @media screen and (max-width: #{$widthBig}) {
       @content;
     } //1200px
   }
@@ -80,6 +80,8 @@ h1 {
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;

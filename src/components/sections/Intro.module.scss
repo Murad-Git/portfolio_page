@@ -2,7 +2,7 @@
 
 .i {
   display: flex;
-  @include resol(mobile) {
+  @include resol(tablet) {
     flex-direction: column;
   }
   &-desc {
@@ -10,6 +10,9 @@
     font-weight: 500;
     @include resol(mobile) {
       display: none;
+    }
+    @include resol(tablet) {
+      padding: 4rem;
     }
   }
   &-left {
@@ -23,6 +26,10 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      @include resol(tablet) {
+        padding: 2rem;
+        height: 100%;
+      }
       @include resol(mobile) {
         padding: 1rem;
         align-items: center;
@@ -67,6 +74,9 @@
     font-size: 4rem;
     font-weight: 300;
     animation: fromLeftAnim 0.9s linear;
+    @include resol(tablet) {
+      font-size: 3rem;
+    }
     @include resol(mobile) {
       margin: 0;
     }
@@ -74,6 +84,11 @@
   &-name {
     animation: fromLeftAnim 1.3s linear;
     font-size: 7rem;
+    @include resol(tablet) {
+      margin: 0;
+      margin-bottom: 3rem;
+      font-size: 6rem;
+    }
     @include resol(mobile) {
       margin: 0;
       font-size: 5rem;

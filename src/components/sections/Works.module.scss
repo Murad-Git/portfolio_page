@@ -10,11 +10,26 @@
     cursor: pointer;
     &.left {
       left: 13rem;
+      @include resol(desktop) {
+        left: 5rem;
+      }
+      @include resol(tablet) {
+        left: 1rem;
+      }
     }
     &.right {
       right: 13rem;
       transform: rotateY(180deg);
+      @include resol(desktop) {
+        right: 5rem;
+      }
+      @include resol(tablet) {
+        right: 1rem;
+      }
     }
+    // @include resol(tablet) {
+    //   display: none;
+    // }
     @include resol(mobile) {
       display: none;
     }
@@ -25,6 +40,12 @@
     position: absolute;
     left: 0;
     transition: all 1s ease-out;
+    @include resol(mobileSmall) {
+      transform: inherit;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+    }
     @include resol(mobile) {
       transform: inherit;
       height: 100vh;

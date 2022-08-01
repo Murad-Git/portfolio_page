@@ -1,26 +1,23 @@
 import classes from './About.module.scss';
-import aboutImg from '../../img/about-img.jpg';
 import { FaReact, FaSass, FaBootstrap } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiRedux, SiMongodb } from 'react-icons/si';
 import { GrNode } from 'react-icons/gr';
 import figmaImg from '../../img/figma.png';
+import frontImg from '../../img/front-img.webp';
 
 import { useInViewHook } from '../hooks/use-inViewEffect';
 
 const About = () => {
   const { ref, isVisible } = useInViewHook();
   return (
-    <section className={classes.a} id='about'>
-      <div ref={ref} className={classes['a-left']}>
+    <section ref={ref} className={classes.a} id='about'>
+      <div className={classes['a-left']}>
         {isVisible && (
           <>
             <div className={`${classes['a-card']} ${classes.bg}`}></div>
-            <div
-              ref={ref}
-              className={`${classes['a-card']}  ${classes.imgAnim}`}
-            >
+            <div className={`${classes['a-card']}  ${classes.imgAnim}`}>
               <img
-                src={aboutImg}
+                src={frontImg}
                 alt='about'
                 className={`${classes['a-img']}`}
               />

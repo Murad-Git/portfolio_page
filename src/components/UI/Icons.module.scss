@@ -3,7 +3,7 @@
 .icon {
   margin-right: 1rem;
   font-size: 2rem;
-  @include resol(mobile) {
+  @include resol(mobileSmall) {
     font-size: 1.5rem;
   }
 }
@@ -14,7 +14,7 @@
   font-weight: 300;
   width: 70%;
   font-size: 2rem;
-  @include resol(mobile) {
+  @include resol(mobileSmall) {
     margin: 1rem 0;
     font-size: 1.5rem;
   }
