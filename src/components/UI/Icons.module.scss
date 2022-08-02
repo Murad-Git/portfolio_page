@@ -3,18 +3,19 @@
 .icon {
   margin-right: 1rem;
   font-size: 2rem;
-  @include resol(mobileSmall) {
+  @include resol(mobile) {
     font-size: 1.5rem;
   }
 }
 .item {
+  text-align: left;
   display: flex;
   align-items: center;
   margin: 5rem 0;
   font-weight: 300;
   width: 70%;
   font-size: 2rem;
-  @include resol(mobileSmall) {
+  @include resol(mobile) {
     margin: 1rem 0;
     font-size: 1.5rem;
   }

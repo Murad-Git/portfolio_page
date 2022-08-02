@@ -3,13 +3,9 @@
 .form {
   margin-top: 2rem;
   @include resol(mobile) {
+    margin: 2rem 0;
     display: flex;
     flex-direction: column;
-  }
-  @include resol(mobile) {
-    margin-top: 0;
-    display: flex;
-    flex-wrap: wrap;
   }
   & input {
     width: 50%;
@@ -24,11 +20,14 @@
       margin: 1rem 0;
     }
     @include resol(mobile) {
-      width: 35%;
+      width: 40%;
       height: 4rem;
       margin: 1rem;
       margin-left: 0;
       height: 3.5rem;
+    }
+    @include resol(mobileSmall) {
+      width: 50%;
     }
     &::placeholder {
       color: $textColor;
@@ -48,6 +47,11 @@
     }
     @include resol(mobile) {
       height: 5rem;
+    }
+    @include resol(mobileSmall) {
+      width: 70%;
+      margin: 1rem 0;
+      height: 4rem;
     }
     // @include resol(mobile) {
     //   height: 4.5em;

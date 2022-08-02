@@ -34,16 +34,19 @@
       margin: 0;
       margin-top: 2rem;
       font-size: 6rem;
-      @include resol(mobileSmall) {
+      @include resol(mobile) {
         font-size: 5rem;
       }
+      // @include resol(mobileSmall) {
+      //   font-size: 5rem;
+      // }
     }
     &-sub {
       font-size: 2.5rem;
       @include resol(desktop) {
-        margin: 0;
+        margin: 1rem 0;
       }
-      @include resol(mobileSmall) {
+      @include resol(mobile) {
         font-size: 2rem;
         margin: 0;
         margin-bottom: 1rem;
@@ -51,7 +54,11 @@
     }
     &-desc {
       font-size: 2rem;
-      @include resol(mobileSmall) {
+
+      @include resol(tablet) {
+        margin: 1rem 0;
+      }
+      @include resol(mobile) {
         font-size: 1.5rem;
         margin: 0;
       }
@@ -62,15 +69,14 @@
       width: 100%;
     }
     @include resol(tablet) {
-      padding: 1rem 2rem;
+      padding: 1rem 5rem;
       justify-content: inherit;
       flex-direction: column;
     }
     @include resol(mobile) {
-      padding: 1rem 2rem;
-      justify-content: inherit;
+      padding: 0;
+      justify-content: space-evenly;
       flex-direction: column;
-      // padding: 2rem;
     }
     @include resol(mobileSmall) {
       padding: 1rem 2rem;
@@ -82,7 +88,6 @@
     border-radius: 3rem;
     position: absolute;
     overflow: hidden;
-    // right: 20rem;
     @include resol(mobile) {
       height: 30vh;
     }
@@ -103,7 +108,7 @@
     object-fit: cover;
   }
   &-tech {
-    margin-top: 5rem;
+    // margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -125,7 +130,7 @@
       }
       @include resol(desktop) {
         margin: 1rem;
-        font-size: 8rem;
+        font-size: 9rem;
       }
       @include resol(mobile) {
         margin: 1rem;
@@ -158,6 +163,9 @@
       }
       .figma {
         height: 10rem;
+        @include resol(desktop) {
+          height: 9rem;
+        }
         @include resol(mobile) {
           height: 7rem;
         }
@@ -187,6 +195,9 @@
     &-desc {
       font-weight: 300;
       font-size: 1.5rem;
+      @include resol(mobile) {
+        padding: 0 2rem;
+      }
     }
   }
 }

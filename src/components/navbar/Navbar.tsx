@@ -7,7 +7,6 @@ import classes from './Navbar.module.scss';
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const themeCtx = useContext(ThemesContext);
-  const { isMenuOpen } = themeCtx;
   const { openMenu } = themeCtx;
 
   const handleResize = () => {
@@ -19,7 +18,6 @@ const Navbar = () => {
       window.addEventListener(event, handleResize)
     );
   });
-  console.log(`${isMobile}`);
 
   return (
     <section className={`${classes.nav}`}>

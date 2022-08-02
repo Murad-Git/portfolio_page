@@ -79,7 +79,6 @@
   .hamburger:before {
     top: -10px;
   }
-
   .hamburger:after {
     bottom: -10px;
   }
@@ -118,9 +117,7 @@
     text-decoration: none;
   }
 }
-// input {
-//   display: none;
-// }
+
 .active {
   .navSmallMenu {
     box-shadow: 0 0 0 100vw $mainColor, 0 0 0 100vh $mainColor;

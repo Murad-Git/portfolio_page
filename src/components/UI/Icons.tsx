@@ -9,16 +9,16 @@ const Icons = () => {
   return (
     <>
       <div className={classes.item}>
-        <FontAwesomeIcon icon={faPhone} className={classes.icon} /> +1 1234 556
-        75
+        <FontAwesomeIcon icon={faPhone} className={classes.icon} />
+        +1 1234 556 75
       </div>
       <div className={classes.item}>
-        <FontAwesomeIcon icon={faAt} className={classes.icon} />{' '}
+        <FontAwesomeIcon icon={faAt} className={classes.icon} />
         contact@lama.dev
       </div>
       <div className={classes.item}>
-        <FontAwesomeIcon icon={faAddressBook} className={classes.icon} /> 245
-        King Street, Touterie Victoria 8520 Australia
+        <FontAwesomeIcon icon={faAddressBook} className={classes.icon} />
+        245 King Street, Touterie Victoria 8520 Australia
       </div>
     </>
   );

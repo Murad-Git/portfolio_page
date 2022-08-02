@@ -15,11 +15,12 @@
     // top: 1rem;
   }
   @include resol(mobile) {
-    height: 7rem;
+    height: 10%;
     top: 1rem;
   }
   @include resol(mobileSmall) {
-    // top: 3rem;
+    height: 4rem;
+    height: 100%;
   }
   .content {
     display: flex;
@@ -42,9 +43,10 @@
         text-transform: uppercase;
         @include resol(mobile) {
           margin: 0.5rem 0;
-        }
-        @include resol(mobile) {
           margin: 0;
+        }
+        @include resol(mobileSmall) {
+          font-size: 1.2rem;
         }
       }
       .socials {
@@ -62,6 +64,9 @@
             font-size: 2rem;
             @include resol(mobile) {
               font-size: 1.8rem;
+            }
+            @include resol(mobileSmall) {
+              font-size: 1.5rem;
             }
           }
         }
