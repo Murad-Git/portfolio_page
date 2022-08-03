@@ -37,12 +37,12 @@
     right: 1rem;
   }
   @include resol(mobile) {
-    top: 10rem;
+    right: 10rem;
     border: 0.3rem solid $textColorDark;
   }
-  @include resol(mobileSmall) {
-    top: 8rem;
-  }
+  // @include resol(mobileSmall) {
+  //   top: 8rem;
+  // }
 }
 .dark {
   right: calc(100% - 5rem);

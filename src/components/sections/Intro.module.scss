@@ -6,9 +6,10 @@
     flex-direction: column;
   }
   &-desc {
+    margin: 0;
     font-size: 2rem;
     font-weight: 500;
-    @include resol(mobile) {
+    @include resol(tablet) {
       display: none;
     }
     @include resol(tablet) {
@@ -21,13 +22,16 @@
     &-wrapper {
       animation: fromLeftAnim 2s linear;
       padding: 5rem;
+      padding-top: 0;
       height: 60%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       @include resol(tablet) {
-        padding: 2rem;
+        margin-top: 2rem;
+        justify-content: space-evenly;
+        // padding: 2rem;
         height: 100%;
       }
       @include resol(mobile) {
@@ -42,9 +46,9 @@
       }
       .scroll {
         top: 10rem;
-        width: 3rem;
-        height: 3rem;
-        border: 0.2rem solid $textColor;
+        width: 4rem;
+        height: 4rem;
+        border: 0.3rem solid $textColor;
         border-radius: 50%;
         position: relative;
         animation: down 1.5s infinite;
@@ -52,13 +56,17 @@
         &::before {
           content: '';
           position: absolute;
-          top: 0.9rem;
-          left: 0.9rem;
-          width: 1rem;
-          height: 1rem;
-          border-left: 0.2rem solid $textColor;
-          border-bottom: 0.2rem solid $textColor;
+          top: 1.6rem;
+          left: 1.3rem;
+          width: 1.2rem;
+          height: 1.2rem;
+          border-left: 0.3rem solid $textColor;
+          border-bottom: 0.3rem solid $textColor;
           transform: rotate(-45deg);
+        }
+        @include resol(tablet) {
+          top: inherit;
+          bottom: 1rem;
         }
         @include resol(mobile) {
           top: 3rem;
@@ -71,6 +79,7 @@
     position: relative;
   }
   &-intro {
+    margin: 0;
     font-size: 4rem;
     font-weight: 300;
     animation: fromLeftAnim 0.9s linear;
@@ -84,9 +93,10 @@
   &-name {
     animation: fromLeftAnim 1.3s linear;
     font-size: 7rem;
+    margin: 0;
     @include resol(tablet) {
       margin: 0;
-      margin-bottom: 3rem;
+      // margin-bottom: 3rem;
       font-size: 6rem;
     }
     @include resol(mobile) {

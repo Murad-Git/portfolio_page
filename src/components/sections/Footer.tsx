@@ -13,27 +13,34 @@ export default function Footer() {
           <h3 className={classes.contact}>Contact me</h3>
           <ul className={classes.socials}>
             <li>
-              <a href='https://www.facebook.com/mmurad.kos'>
-                <FacebookIcon className={classes.icon} />
-              </a>
-            </li>
-            <li>
-              <a href='https://www.instagram.com/murad_kos/'>
+              <a
+                target='_blank'
+                rel='noreferrer'
+                href='https://www.instagram.com/murad_kos/'
+              >
                 <InstagramIcon className={classes.icon} />
               </a>
             </li>
             <li>
-              <a href='https://twitter.com/MuradKos1'>
+              <a
+                target='_blank'
+                rel='noreferrer'
+                href='https://twitter.com/MuradKos1'
+              >
                 <TwitterIcon className={classes.icon} />
               </a>
             </li>
             <li>
-              <a href='https://www.linkedin.com/in/murad-kos/'>
+              <a
+                target='_blank'
+                rel='noreferrer'
+                href='https://www.linkedin.com/in/murad-kos/'
+              >
                 <LinkedInIcon className={classes.icon} />
               </a>
             </li>
             <li>
-              <a href='mailto:blank@blank.com'>
+              <a target='_blank' rel='noreferrer' href='mailto:blank@blank.com'>
                 <button type='submit'>
                   <AlternateEmailIcon className={classes.icon} />
                 </button>

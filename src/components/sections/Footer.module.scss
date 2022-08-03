@@ -5,35 +5,41 @@
   box-shadow: inset 0 0.1rem 0 0 #eceef2;
   color: $textColor;
   overflow: hidden;
-  display: flex;
-  height: 15rem;
+  // display: flex;
+  // height: 15rem;
   position: relative;
-  flex-direction: column;
-  justify-content: space-between;
+  // flex-direction: column;
+  // justify-content: space-between;
   @include resol(tablet) {
     height: 7rem;
     // top: 1rem;
   }
   @include resol(mobile) {
-    height: 10%;
+    // height: 10%;
     // top: 1rem;
   }
-  @include resol(mobileSmall) {
-    height: 4rem;
-    height: 100%;
-  }
+  // @include resol(mobileSmall) {
+  //   height: 4rem;
+  //   height: 100%;
+  // }
   .content {
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
+    @include resol(mobile) {
+      margin: 0;
+      margin: 1rem 0;
+    }
     .field {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
       width: 50%;
       @include resol(mobile) {
         width: 70%;
       }
       .contact {
-        margin: 0.5rem auto;
+        // margin: 0.5rem auto;
         // margin-bottom: 1rem;
         font-style: normal;
         font-size: 1.5rem;
@@ -54,14 +60,22 @@
         justify-content: space-evenly;
         margin: 0;
         padding: 0;
+        li {
+          display: flex;
+          margin-right: 4rem;
+          @include resol(mobile) {
+            margin-right: 1rem;
+          }
+        }
         a {
+          display: flex;
           font-size: 2rem;
-          color: #6a6d75;
+          color: inherit;
           &:hover {
             color: $textColor;
           }
           .icon {
-            font-size: 2rem;
+            font-size: 2.5rem;
             @include resol(mobile) {
               font-size: 1.8rem;
             }

@@ -11,12 +11,11 @@ const Toggle = () => {
   const { darkMode } = themeCtx;
   const { toggleMode } = themeCtx;
   return (
-    <section className={classes.t}>
+    <section className={classes.t} onClick={() => toggleMode()}>
       <FontAwesomeIcon icon={faSun} className={classes['t-icon']} />
       <FontAwesomeIcon icon={faMoon} className={classes['t-icon']} />
       <button
         className={`${classes['t-button']} ${darkMode && classes.dark}`}
-        onClick={() => toggleMode()}
       ></button>
     </section>
   );

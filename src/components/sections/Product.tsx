@@ -8,7 +8,12 @@ const Product: React.FC<{ img: string; link: string }> = ({ link, img }) => {
         <div className={classes['p-circle']}></div>
         <div className={classes['p-circle']}></div>
       </div>
-      <a href={link} target='_blank' rel='noreferrer'>
+      <a
+        href={link}
+        target='_blank'
+        rel='noreferrer'
+        className={classes.imageA}
+      >
         <img src={img} alt='' className={classes['p-img']} />
       </a>
     </div>

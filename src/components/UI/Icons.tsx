@@ -10,15 +10,17 @@ const Icons = () => {
     <>
       <div className={classes.item}>
         <FontAwesomeIcon icon={faPhone} className={classes.icon} />
-        +1 1234 556 75
+        +1 2345 678 99
       </div>
       <div className={classes.item}>
-        <FontAwesomeIcon icon={faAt} className={classes.icon} />
-        contact@lama.dev
+        <a href='mailto:blank@blank.com'>
+          <FontAwesomeIcon icon={faAt} className={classes.icon} />
+          murad.kos@gmail.com
+        </a>
       </div>
       <div className={classes.item}>
         <FontAwesomeIcon icon={faAddressBook} className={classes.icon} />
-        245 King Street, Touterie Victoria 8520 Australia
+        Warsaw, Poland
       </div>
     </>
   );

@@ -33,8 +33,10 @@ const About = () => {
           </p>
           <p className={classes['a-right-desc']}>
             I started my learning in 2020 and made some projects using below
-            technologies. Currently I am deeping my knowledge in React,
-            TypeScript and NextJS. My goal is to become Front-end Developer.
+            technologies. Currently I am deeping my knowledge in{' '}
+            <strong>React, TypeScript and NextJS.</strong>
+            <br />
+            My goal is to become Front-end Developer.
           </p>
           <div className={classes['a-tech']}>
             <div className={classes.tool}>

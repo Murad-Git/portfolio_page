@@ -22,7 +22,7 @@
   }
   &-browser {
     height: 2rem;
-    background-color: $secondColor;
+    background-color: $thirdColor;
     display: flex;
     align-items: center;
     position: sticky;
@@ -38,6 +38,9 @@
   &-img {
     width: 100%;
     transition: all 5s ease;
+    &:nth-child(2) {
+      height: 100%;
+    }
   }
   &:hover &-img {
     transform: translateY(-50%);

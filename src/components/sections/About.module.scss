@@ -54,7 +54,7 @@
     }
     &-desc {
       font-size: 2rem;
-
+      text-align: center;
       @include resol(tablet) {
         margin: 1rem 0;
       }

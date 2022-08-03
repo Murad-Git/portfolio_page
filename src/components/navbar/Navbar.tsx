@@ -23,7 +23,7 @@ const Navbar = () => {
     <section className={`${classes.nav}`}>
       <div className={classes.wrapper}>
         <a href='#intro' className={classes.logo}>
-          genius.
+          welcome.
         </a>
         <div className={classes.itemContainer}>
           <Menu isMobile={isMobile} openMenu={openMenu} />

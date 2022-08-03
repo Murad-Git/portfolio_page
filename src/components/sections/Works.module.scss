@@ -9,7 +9,7 @@
     position: absolute;
     cursor: pointer;
     &.left {
-      left: 13rem;
+      left: 30rem;
       @include resol(desktop) {
         left: 5rem;
       }
@@ -18,7 +18,7 @@
       }
     }
     &.right {
-      right: 13rem;
+      right: 30rem;
       transform: rotateY(180deg);
       @include resol(desktop) {
         right: 5rem;
@@ -32,7 +32,7 @@
     }
   }
   & .slider {
-    height: 50rem;
+    height: 60rem;
     display: flex;
     position: absolute;
     left: 0;
