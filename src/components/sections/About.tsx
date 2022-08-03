@@ -5,10 +5,10 @@ import { GrNode } from 'react-icons/gr';
 import figmaImg from '../../img/figma.png';
 import frontImg from '../../img/front-img.webp';
 
-import { useInViewHook } from '../hooks/use-inViewEffect';
+import { useView } from '../hooks/use-view';
 
 const About = () => {
-  const { ref, isVisible } = useInViewHook();
+  const { ref, isVisible } = useView();
   return (
     <section ref={ref} className={classes.a} id='about'>
       <div className={classes['a-left']}>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useInViewEffect } from 'react-hook-inview';
 
-export const useInViewHook = () => {
+export const useView = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const ref = useInViewEffect(

@@ -1,10 +1,10 @@
 import Product from './Product';
 import classes from './ProductList.module.scss';
 import { products } from '../../data/projects';
-import { useInViewHook } from '../hooks/use-inViewEffect';
+import { useView } from '../hooks/use-view';
 
 const ProductList = () => {
-  const { ref, isVisible } = useInViewHook();
+  const { ref, isVisible } = useView();
 
   return (
     <section className={classes.pl} id='projects'>
