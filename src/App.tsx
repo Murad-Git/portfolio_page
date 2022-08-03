@@ -14,7 +14,6 @@ function App() {
   return (
     <div className={`${classes.app} ${darkMode && classes.dark}`}>
       <Navbar />
-      {/* <Toggle /> */}
       <div className={classes.sections}>
         <Intro />
         <About />
@@ -27,8 +26,3 @@ function App() {
 }
 
 export default App;
-
-//  style={{
-//     backgroundColor: darkMode ? '#222' : 'white',
-//     color: darkMode ? 'white' : 'black',
-//   }}

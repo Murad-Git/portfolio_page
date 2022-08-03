@@ -1,12 +1,10 @@
 import classes from './Intro.module.scss';
 import heroImg from '../../img/Kos_Murad-removebg_sm.png';
 import { titlesAnimation } from '../../data/projects';
-import Toggle from '../toggle/Toggle';
 
 const Intro = () => {
   return (
     <section className={classes.i} id='intro'>
-      {/* <Toggle /> */}
       <div className={classes['i-left']}>
         <div className={classes['i-left-wrapper']}>
           <h2 className={classes['i-intro']}>Hello, My name is</h2>
@@ -23,13 +21,9 @@ const Intro = () => {
           <p className={classes['i-desc']}>
             My passion is to create beautiful and clear web pages.
           </p>
-
-          {/* <div className={classes.scroll}> */}
           <a href='#about'>
             <div className={classes.scroll}></div>
           </a>
-          {/* </div> */}
-          {/* <ScrollSvg className={classes['i-scroll']} /> */}
         </div>
       </div>
       <div className={classes['i-right']}>

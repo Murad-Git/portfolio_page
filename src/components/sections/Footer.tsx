@@ -42,49 +42,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      {/* <div className={classes.bottom}>
-        <div className={classes.container}>
-          <p className={classes.deskt}>
-            © 2022 Portfolio Page. All Rights Reserved. Created by Murad Kos
-          </p>
-        </div>
-      </div> */}
-      {/* <div className={classes.content}>
-        <p className={classes.mob}>© Murad Kos</p>
-        <p className={classes.deskt}>
-          © 2022 Portfolio Page. All Rights Reserved. Created by Murad Kos
-        </p>
-        <h3 className={`${classes.contact} ${classes.deskt}`}>Contact me</h3>
-        <ul className={classes.socials}>
-          <li>
-            <a href='#'>
-              <FacebookIcon className={classes.icon} />
-            </a>
-          </li>
-          <li>
-            <a href='#'>
-              <InstagramIcon className={classes.icon} />
-            </a>
-          </li>
-          <li>
-            <a href='#'>
-              <TwitterIcon className={classes.icon} />
-            </a>
-          </li>
-          <li>
-            <a href='#'>
-              <LinkedInIcon className={classes.icon} />
-            </a>
-          </li>
-          <li>
-            <a href='mailto:blank@blank.com'>
-              <button type='submit'>
-                <AlternateEmailIcon className={classes.icon} />
-              </button>
-            </a>
-          </li>
-        </ul>
-      </div> */}
     </section>
   );
 }

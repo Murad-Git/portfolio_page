@@ -39,10 +39,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // @include resol(mobileSmall) {
-  //   height: 100%;
-  //   width: 100%;
-  // }
   @include resol(mobile) {
     height: 100%;
     width: 100%;
@@ -55,9 +51,6 @@
     @include flex;
     & .img {
       font-size: 2.5rem;
-      // @include resol(mobileSmall) {
-      //   font-size: 2rem;
-      // }
       @include resol(mobile) {
         font-size: 2rem;
       }
@@ -68,9 +61,6 @@
   }
   & p {
     font-size: 1.3rem;
-    // @include resol(mobileSmall) {
-    //   display: none;
-    // }
     @include resol(mobile) {
       display: none;
     }

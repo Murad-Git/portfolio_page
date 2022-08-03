@@ -42,9 +42,9 @@
       margin: 3rem 0;
       margin-bottom: 4rem;
     }
-    // @include resol(mobile) {
-    //   margin-bottom: 1rem;
-    // }
+    @include resol(mobileSmall) {
+      margin: 0;
+    }
   }
   &-right {
     flex: 1;
@@ -76,7 +76,7 @@
   &-desc {
     font-size: 2rem;
     font-weight: 200;
-    @include resol(tablet) {
+    @include resol(desktop) {
       margin: 0;
     }
     @include resol(mobile) {

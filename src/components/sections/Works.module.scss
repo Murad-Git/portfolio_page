@@ -27,9 +27,6 @@
         right: 1rem;
       }
     }
-    // @include resol(tablet) {
-    //   display: none;
-    // }
     @include resol(mobile) {
       display: none;
     }

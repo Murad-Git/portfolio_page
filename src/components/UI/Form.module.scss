@@ -2,10 +2,16 @@
 
 .form {
   margin-top: 2rem;
+  @include resol(desktop) {
+    margin: 0;
+  }
   @include resol(mobile) {
     margin: 2rem 0;
     display: flex;
     flex-direction: column;
+  }
+  @include resol(mobileSmall) {
+    margin: 0;
   }
   & input {
     width: 50%;
@@ -15,6 +21,9 @@
     margin: 2rem 0;
     font-size: 1.7rem;
     padding-left: 1rem;
+    @include resol(desktop) {
+      margin: 1.5rem 0;
+    }
     @include resol(tablet) {
       width: 100%;
       margin: 1rem 0;
@@ -53,9 +62,6 @@
       margin: 1rem 0;
       height: 4rem;
     }
-    // @include resol(mobile) {
-    //   height: 4.5em;
-    // }
     &::placeholder {
       color: $textColor;
       @include resol(mobile) {
@@ -74,9 +80,6 @@
     cursor: pointer;
     @include resol(tablet) {
       font-size: 1.3rem;
-      // margin-top: 1rem;
-      // padding: 1rem;
-      // margin: 0;
     }
     @include resol(mobile) {
       font-size: 1.3rem;

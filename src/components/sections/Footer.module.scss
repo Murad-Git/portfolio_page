@@ -16,7 +16,7 @@
   }
   @include resol(mobile) {
     height: 10%;
-    top: 1rem;
+    // top: 1rem;
   }
   @include resol(mobileSmall) {
     height: 4rem;

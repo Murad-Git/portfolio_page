@@ -1,7 +1,5 @@
 @import '../../global.scss';
 
-// @import '../styles/media-queries.scss';
-
 .t {
   width: 5rem;
   height: 2.5rem;
@@ -40,12 +38,10 @@
   }
   @include resol(mobile) {
     top: 10rem;
-    // left: 40rem;
     border: 0.3rem solid $textColorDark;
   }
   @include resol(mobileSmall) {
     top: 8rem;
-    // left: 30rem;
   }
 }
 .dark {

@@ -78,9 +78,6 @@
       justify-content: space-evenly;
       flex-direction: column;
     }
-    @include resol(mobileSmall) {
-      padding: 1rem 2rem;
-    }
   }
   &-card {
     width: 80%;

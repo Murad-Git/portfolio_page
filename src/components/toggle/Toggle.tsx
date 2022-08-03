@@ -16,7 +16,6 @@ const Toggle = () => {
       <FontAwesomeIcon icon={faMoon} className={classes['t-icon']} />
       <button
         className={`${classes['t-button']} ${darkMode && classes.dark}`}
-        // onClick={() => toggleMode()}
         onClick={() => toggleMode()}
       ></button>
     </section>
