@@ -15,6 +15,7 @@
     // top: 1rem;
   }
   @include resol(mobile) {
+    height: auto;
     // height: 10%;
     // top: 1rem;
   }
@@ -35,6 +36,9 @@
       align-items: center;
       justify-content: space-evenly;
       width: 50%;
+      @include resol(tablet) {
+        width: 100%;
+      }
       @include resol(mobile) {
         width: 70%;
       }

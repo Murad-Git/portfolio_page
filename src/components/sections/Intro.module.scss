@@ -68,9 +68,9 @@
           top: inherit;
           bottom: 1rem;
         }
-        @include resol(mobile) {
-          top: 3rem;
-        }
+        // @include resol(mobile) {
+        //   top: 3rem;
+        // }
       }
     }
   }

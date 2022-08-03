@@ -33,7 +33,7 @@
     }
   }
   @include resol(tablet) {
-    top: 10rem;
+    top: inherit;
     right: 1rem;
   }
   @include resol(mobile) {

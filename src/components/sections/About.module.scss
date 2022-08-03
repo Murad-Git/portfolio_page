@@ -4,6 +4,9 @@
   height: 100vh;
   display: flex;
   align-items: flex-start;
+  @include resol(tablet) {
+    align-items: center;
+  }
   @include resol(mobile) {
     flex-direction: column;
     text-align: center;
@@ -69,6 +72,7 @@
       width: 100%;
     }
     @include resol(tablet) {
+      width: 80%;
       padding: 1rem 5rem;
       justify-content: inherit;
       flex-direction: column;

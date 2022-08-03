@@ -31,6 +31,7 @@ const Inputs = () => {
           setFormStatus('Something went wrong :(');
         }
       );
+    clearHandler();
   };
   const clearHandler = () => {
     formRef.current?.reset();
@@ -65,7 +66,7 @@ const Inputs = () => {
         rows={6}
         placeholder='Message'
       />
-      <button onClick={clearHandler}>{formStatus}</button>
+      <button>{formStatus}</button>
     </form>
   );
 };
