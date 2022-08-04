@@ -2,12 +2,11 @@ import classes from './Works.module.scss';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import WorksContainer from '../UI/WorksContainer';
 import { useContext } from 'react';
-import { ThemesContext } from '../../store/themes.context';
+import { SliderDirection, ThemesContext } from '../../store/main.context';
 
 const Works = () => {
-  const themeCtx = useContext(ThemesContext);
-  const { changeSlide } = themeCtx;
-  const { currentSlide } = themeCtx;
+  const { changeSlide } = useContext(ThemesContext);
+  const { currentSlide } = useContext(ThemesContext);
   return (
     <section className={classes.works} id='works'>
       <div
@@ -18,11 +17,11 @@ const Works = () => {
       </div>
       <ArrowBackIosNewIcon
         className={`${classes.arrow} ${classes.left}`}
-        onClick={() => changeSlide('left')}
+        onClick={() => changeSlide(SliderDirection.Left)}
       />
       <ArrowBackIosNewIcon
         className={`${classes.arrow} ${classes.right}`}
-        onClick={() => changeSlide(null)}
+        onClick={() => changeSlide(SliderDirection.Right)}
       />
     </section>
   );

@@ -4,7 +4,7 @@ import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext } from 'react';
-import { ThemesContext } from '../../store/themes.context';
+import { ThemesContext } from '../../store/main.context';
 
 const Toggle = () => {
   const themeCtx = useContext(ThemesContext);

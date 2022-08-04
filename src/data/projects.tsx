@@ -41,28 +41,28 @@ export const products = [
   },
 ];
 
-export const worksFc = (img: string) => {
+export const works = (imgClassName: string) => {
   return [
     {
       id: 1,
       title: 'Web Design',
-      icon: <AodIcon className={img} />,
+      icon: <AodIcon className={imgClassName} />,
       desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, veritatis!',
-      img: <RelaxSvg className={img} />,
+      img: <RelaxSvg className={imgClassName} />,
     },
     {
       id: 2,
       title: 'Cooking Design',
-      icon: <AcUnitIcon className={img} />,
+      icon: <AcUnitIcon className={imgClassName} />,
       desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, veritatis!',
-      img: <CookSvg className={img} />,
+      img: <CookSvg className={imgClassName} />,
     },
     {
       id: 3,
       title: 'Project Design',
-      icon: <AddModeratorIcon className={img} />,
+      icon: <AddModeratorIcon className={imgClassName} />,
       desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, veritatis!',
-      img: <ProjectSvg className={img} />,
+      img: <ProjectSvg className={imgClassName} />,
     },
   ];
 };

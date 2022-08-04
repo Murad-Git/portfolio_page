@@ -1,8 +1,8 @@
 import classes from './WorksContainer.module.scss';
-import { worksFc } from '../../data/projects';
+import { works } from '../../data/projects';
 
 const WorksContainer = () => {
-  const worksList = worksFc(classes.img);
+  const worksList = works(classes.img);
   return (
     <>
       {worksList.map((work) => (

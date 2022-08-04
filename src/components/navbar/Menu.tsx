@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemesContext } from '../../store/themes.context';
+import { ThemesContext } from '../../store/main.context';
 import classes from './Menu.module.scss';
 
 const Menu: React.FC<{ openMenu?: () => void; isMobile: boolean }> = ({
@@ -16,23 +16,33 @@ const Menu: React.FC<{ openMenu?: () => void; isMobile: boolean }> = ({
       onClick={() => openMenu?.()}
     >
       <span className={classes.navSmallMenu}>
-        <span className={classes.hamburger}></span>
+        <button aria-label='menu' className={classes.hamburger}></button>
       </span>
       <ul className={`${isMobile ? classes.listSmall : classes.listBig}`}>
         <li>
-          <a href='#intro'>Home</a>
+          <a className={classes.navItem} href='#intro'>
+            Home
+          </a>
         </li>
         <li>
-          <a href='#about'>About</a>
+          <a className={classes.navItem} href='#about'>
+            About
+          </a>
         </li>
         <li>
-          <a href='#projects'>Projects</a>
+          <a className={classes.navItem} href='#projects'>
+            Projects
+          </a>
         </li>
         <li>
-          <a href='#works'>Works</a>
+          <a className={classes.navItem} href='#works'>
+            Works
+          </a>
         </li>
         <li>
-          <a href='#contact'>Contact</a>
+          <a className={classes.navItem} href='#contact'>
+            Contact
+          </a>
         </li>
       </ul>
     </div>

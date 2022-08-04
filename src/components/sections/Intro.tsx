@@ -28,7 +28,7 @@ const Intro = () => {
       </div>
       <div className={classes['i-right']}>
         <div className={classes['i-bg']}></div>
-        <img src={heroImg} alt='hero-img' className={classes['i-img']} />
+        <img src={heroImg} alt='main page' className={classes['i-img']} />
       </div>
     </section>
   );

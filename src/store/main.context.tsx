@@ -3,24 +3,28 @@ import React, { createContext, useState } from 'react';
 interface Props {
   children?: React.ReactNode;
 }
-const themeValue = () => {
-  const theme = localStorage.getItem('data-theme');
-  const themeBool = theme === 'light' ? false : true;
-  return themeBool;
+const getDarkMode = () => {
+  const theme = localStorage.getItem('data-theme') === 'light' ? false : true;
+  return theme;
 };
+
+export enum SliderDirection {
+  Left,
+  Right,
+}
 // variables typing
 type ThemesContextState = {
   darkMode: boolean;
   toggleMode: () => void;
   currentSlide: number;
-  changeSlide: (isLeft: string | null) => void;
+  changeSlide: (direction: SliderDirection) => void;
   isMenuOpen: boolean;
   openMenu: () => void;
 };
 
 // default state
 const contextDefaultValues: ThemesContextState = {
-  darkMode: themeValue(),
+  darkMode: getDarkMode(),
   toggleMode: () => {},
   currentSlide: 0,
   changeSlide: () => {},
@@ -49,19 +53,18 @@ const ThemesProvider: React.FC<Props> = ({ children }) => {
     if (!pageMode) {
       setPageMode((pageMode) => !pageMode);
       localStorage.setItem('data-theme', 'dark');
-    }
-    if (pageMode) {
+    } else {
       setPageMode((pageMode) => !pageMode);
       localStorage.setItem('data-theme', 'light');
     }
   };
   // slider
-  const changeSlide = (isLeft: string | null) => {
-    if (isLeft === 'left')
+  const changeSlide = (direction: SliderDirection) => {
+    if (direction === SliderDirection.Left) {
       setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2);
-    if (isLeft === null) {
-      setCurrentSlide(currentSlide < 2 ? currentSlide + 1 : 0);
+      return;
     }
+    setCurrentSlide(currentSlide < 2 ? currentSlide + 1 : 0);
   };
   // hamburger menu
   const openMenu = () => {

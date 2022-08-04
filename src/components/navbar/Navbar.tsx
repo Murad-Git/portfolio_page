@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { ThemesContext } from '../../store/themes.context';
+import { ThemesContext } from '../../store/main.context';
 import Toggle from '../toggle/Toggle';
 import Menu from './Menu';
 import classes from './Navbar.module.scss';
