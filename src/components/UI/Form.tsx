@@ -35,6 +35,7 @@ const Inputs = () => {
     setMessageVal(event.target.value);
   };
 
+  //checking if values are valid
   const { nameValid, subjectValid, emailValid, messageValid } = useValidate({
     name: nameVal,
     subject: subjectVal,
@@ -42,6 +43,7 @@ const Inputs = () => {
     message: messageVal,
   });
 
+  //checking form validity every 500ms
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log('checking form validy');
@@ -58,8 +60,30 @@ const Inputs = () => {
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
+
     if (formValid) {
       setFormStatus('Sending...');
+      // activate to send email and comment timeout
+      // const enteredText = formRef.current;
+
+      // emailjs
+      //   .sendForm(
+      //     'service_499lwmq',
+      //     'template_46lgapl',
+      //     enteredText!,
+      //     'fkfSYTxNHIzl7jb8z'
+      //   )
+      //   .then(
+      //     (result) => {
+      //       console.log(result.text);
+      //       setFormStatus('Done!');
+      //     },
+      //     (error) => {
+      //       console.log(error.text);
+      //       setFormStatus('Something went wrong :(');
+      //     }
+      //   );
+
       setTimeout(() => {
         setFormStatus('Done!');
       }, 2000);
@@ -67,31 +91,10 @@ const Inputs = () => {
       clearFormHandler();
       setFormValid(false);
     }
-    !nameValid && nameRef.current?.focus();
-    !subjectValid && subjectRef.current?.focus();
-    !emailValid && emailRef.current?.focus();
     !messageValid && messageRef.current?.focus();
-
-    // activate to send email
-    // const enteredText = formRef.current;
-
-    // emailjs
-    //   .sendForm(
-    //     'service_499lwmq',
-    //     'template_46lgapl',
-    //     enteredText!,
-    //     'fkfSYTxNHIzl7jb8z'
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       setFormStatus('Done!');
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //       setFormStatus('Something went wrong :(');
-    //     }
-    //   );
+    !emailValid && emailRef.current?.focus();
+    !subjectValid && subjectRef.current?.focus();
+    !nameValid && nameRef.current?.focus();
   };
   const clearFormHandler = () => {
     formRef.current?.reset();

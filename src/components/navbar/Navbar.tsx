@@ -5,7 +5,7 @@ import Menu from './Menu';
 import classes from './Navbar.module.scss';
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(Boolean);
   const themeCtx = useContext(ThemesContext);
   const { openMenu } = themeCtx;
 
