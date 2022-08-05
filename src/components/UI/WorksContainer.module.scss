@@ -17,12 +17,12 @@
     }
     @include resol(mobile) {
       width: 80%;
-      height: 20rem;
+      height: 15rem;
       margin: 0.5rem 0;
     }
     @include resol(mobileSmall) {
       width: 80%;
-      height: 15rem;
+      // height: 15rem;
       margin: 0.5rem 0;
     }
     & .left {

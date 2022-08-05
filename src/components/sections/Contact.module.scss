@@ -38,13 +38,9 @@
   }
   &-left {
     flex: 1;
-    @include resol(mobile) {
-      // margin: 3rem 0;
-      margin-bottom: 4rem;
-    }
+
     @include resol(mobileSmall) {
       margin: 0;
-      // margin: 3rem 0;
     }
   }
   &-right {
