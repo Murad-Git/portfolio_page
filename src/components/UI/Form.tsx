@@ -46,7 +46,6 @@ const Inputs = () => {
   //checking form validity every 500ms
   useEffect(() => {
     const identifier = setTimeout(() => {
-      console.log('checking form validy');
       const formValidity =
         nameValid && subjectValid && emailValid && messageValid ? true : false;
       setFormValid(formValidity);
