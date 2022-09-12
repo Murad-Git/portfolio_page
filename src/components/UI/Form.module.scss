@@ -2,6 +2,9 @@
 
 .form {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   @include resol(desktop) {
     margin: 0;
   }
@@ -82,6 +85,7 @@
     }
   }
   & button {
+    width: 10%;
     font-size: 1.7rem;
     border-radius: 5%;
     border: none;

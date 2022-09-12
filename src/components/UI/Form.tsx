@@ -64,29 +64,29 @@ const Inputs = () => {
     if (formValid) {
       setFormStatus('Sending...');
       // activate to send email and comment timeout
-      // const enteredText = formRef.current;
+      const enteredText = formRef.current;
 
-      // emailjs
-      //   .sendForm(
-      //     'service_499lwmq',
-      //     'template_46lgapl',
-      //     enteredText!,
-      //     'fkfSYTxNHIzl7jb8z'
-      //   )
-      //   .then(
-      //     (result) => {
-      //       console.log(result.text);
-      //       setFormStatus('Done!');
-      //     },
-      //     (error) => {
-      //       console.log(error.text);
-      //       setFormStatus('Something went wrong :(');
-      //     }
-      //   );
+      emailjs
+        .sendForm(
+          'service_499lwmq',
+          'template_46lgapl',
+          enteredText!,
+          'fkfSYTxNHIzl7jb8z'
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setFormStatus('Done!');
+          },
+          (error) => {
+            console.log(error.text);
+            setFormStatus('Something went wrong :(');
+          }
+        );
 
-      setTimeout(() => {
-        setFormStatus('Done!');
-      }, 2000);
+      // setTimeout(() => {
+      //   setFormStatus('Done!');
+      // }, 2000);
 
       clearFormHandler();
       setFormValid(false);

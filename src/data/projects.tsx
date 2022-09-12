@@ -1,4 +1,5 @@
 import cookbirdImg from '../img/cookbird-shot.webp';
+import movieImg from '../img/movie_page_screenshot.webp';
 import spoonAndForkImg from '../img/spoonacular-shot.webp';
 import soonImg from '../img/soon.webp';
 import AodIcon from '@mui/icons-material/Aod';
@@ -11,18 +12,18 @@ import { ReactComponent as ProjectSvg } from '../img/project-project.svg';
 export const products = [
   {
     id: 1,
+    img: movieImg,
+    link: 'https://movie-rating-timdb.vercel.app/',
+  },
+  {
+    id: 2,
     img: cookbirdImg,
     link: 'https://cook-bird.herokuapp.com/',
   },
   {
-    id: 2,
+    id: 3,
     img: spoonAndForkImg,
     link: 'https://spoonandfork.netlify.app/',
-  },
-  {
-    id: 3,
-    img: soonImg,
-    link: 'https://www.google.com/',
   },
   {
     id: 4,
