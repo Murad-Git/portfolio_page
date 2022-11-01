@@ -3,46 +3,59 @@
 .works {
   position: relative;
   @include flex;
+
   & .arrow {
     color: $textColor;
     font-size: 8rem;
     position: absolute;
     cursor: pointer;
+
     &.left {
       left: 30rem;
+
       @include resol(desktop) {
         left: 5rem;
       }
+
       @include resol(tablet) {
+        font-size: 6rem;
         left: 1rem;
       }
     }
+
     &.right {
       right: 30rem;
       transform: rotateY(180deg);
+
       @include resol(desktop) {
         right: 5rem;
       }
+
       @include resol(tablet) {
+        font-size: 6rem;
         right: 1rem;
       }
     }
+
     @include resol(mobile) {
       display: none;
     }
   }
+
   & .slider {
     height: 60rem;
     display: flex;
     position: absolute;
     left: 0;
     transition: all 1s ease-out;
+
     @include resol(mobileSmall) {
       transform: inherit;
       height: 100vh;
       flex-direction: column;
       justify-content: center;
     }
+
     @include resol(mobile) {
       transform: inherit;
       height: 100vh;

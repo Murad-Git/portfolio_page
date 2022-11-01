@@ -3,10 +3,12 @@
 .icon {
   margin-right: 1rem;
   font-size: 2rem;
+
   @include resol(mobile) {
     font-size: 1.5rem;
   }
 }
+
 .item {
   text-align: left;
   color: inherit;
@@ -16,14 +18,21 @@
   font-weight: 300;
   width: 70%;
   font-size: 2rem;
+
   a {
     color: inherit;
   }
+
+  @media screen and (max-width: 768px) {
+    margin: 1rem 0;
+  }
+
   @include resol(mobile) {
     margin: 1rem 0;
     font-size: 1.5rem;
   }
 }
+
 .img {
   flex: 1;
 }

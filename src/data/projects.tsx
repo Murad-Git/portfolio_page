@@ -20,26 +20,6 @@ export const products = [
     img: cookbirdImg,
     link: 'https://cook-bird.herokuapp.com/',
   },
-  {
-    id: 3,
-    img: spoonAndForkImg,
-    link: 'https://spoonandfork.netlify.app/',
-  },
-  {
-    id: 4,
-    img: soonImg,
-    link: 'https://www.google.com/',
-  },
-  {
-    id: 5,
-    img: soonImg,
-    link: 'https://www.google.com/',
-  },
-  {
-    id: 6,
-    img: soonImg,
-    link: 'https://www.google.com/',
-  },
 ];
 
 export const works = (imgClassName: string) => {

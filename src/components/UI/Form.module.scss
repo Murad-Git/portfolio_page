@@ -5,17 +5,21 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
   @include resol(desktop) {
     margin: 0;
   }
+
   @include resol(mobile) {
     margin: 2rem 0;
     display: flex;
     flex-direction: column;
   }
+
   @include resol(mobileSmall) {
     margin: 0;
   }
+
   & label {
     border-width: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -26,6 +30,7 @@
     position: absolute;
     white-space: nowrap;
   }
+
   & input {
     width: 50%;
     height: 5rem;
@@ -34,13 +39,16 @@
     margin: 2rem 0;
     font-size: 1.7rem;
     padding-left: 1rem;
+
     @include resol(desktop) {
       margin: 1.5rem 0;
     }
+
     @include resol(tablet) {
       width: 100%;
       margin: 1rem 0;
     }
+
     @include resol(mobile) {
       font-size: 1.3rem;
       width: 40%;
@@ -48,16 +56,20 @@
       margin-left: 0;
       height: 3.5rem;
     }
+
     @include resol(mobileSmall) {
       width: 50%;
     }
+
     &::placeholder {
       color: $textColor;
+
       @include resol(mobile) {
         font-size: 1.2rem;
       }
     }
   }
+
   & textarea {
     border: none;
     border-bottom: 0.1rem solid $textColor;
@@ -66,26 +78,32 @@
     margin: 2rem 0;
     padding-left: 1rem;
     font-family: inherit;
+
     @include resol(tablet) {
       width: 100%;
     }
+
     @include resol(mobile) {
       height: 5rem;
     }
+
     @include resol(mobileSmall) {
       width: 70%;
       margin: 1rem 0;
       height: 4rem;
     }
+
     &::placeholder {
       color: $textColor;
+
       @include resol(mobile) {
         font-size: 1.2rem;
       }
     }
   }
+
   & button {
-    width: 10%;
+    width: 20%;
     font-size: 1.7rem;
     border-radius: 5%;
     border: none;
@@ -94,35 +112,58 @@
     background-color: $textColor;
     font-weight: 500;
     cursor: pointer;
+
     @include resol(tablet) {
       font-size: 1.3rem;
+      width: 20%;
     }
+
+    @media screen and (max-width: 1024px) {
+      width: 30%;
+
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 40%;
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      margin: 0;
+    }
+
     @include resol(mobile) {
+      width: 50%;
       font-size: 1.3rem;
       margin-top: 1rem;
       padding: 1rem;
       margin: 0;
     }
   }
+
   .invalid {
     border: 0.1rem solid red;
     background-color: #f6dbfc;
     -webkit-animation: shake 0.5s linear;
     animation: shake 0.5s linear;
+
     &:focus {
       border: 0.1rem solid red;
     }
   }
 }
+
 .form-dark {
   & input {
     background-color: #333;
+
     &::placeholder {
       color: white;
     }
   }
+
   & textarea {
     background-color: #333;
+
     &::placeholder {
       color: white;
     }
@@ -130,20 +171,25 @@
 }
 
 @keyframes shake {
+
   8%,
   41% {
     transform: translateX(-10px);
   }
+
   25%,
   58% {
     transform: translateX(10px);
   }
+
   75% {
     transform: translateX(-5px);
   }
+
   92% {
     transform: translateX(5px);
   }
+
   0%,
   100% {
     transform: translateX(0);

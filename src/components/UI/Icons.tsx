@@ -15,7 +15,7 @@ const Icons = () => {
       <div className={classes.item}>
         <a href='mailto:blank@blank.com'>
           <FontAwesomeIcon icon={faAt} className={classes.icon} />
-          murad.kos@gmail.com
+          mmurad.kos@gmail.com
         </a>
       </div>
       <div className={classes.item}>
